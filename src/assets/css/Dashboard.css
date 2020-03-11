@@ -25,6 +25,9 @@
 
 .dashboard-title {
   text-align: left;
+  font-family: 'Roboto-Regular', 'Roboto';
+  font-size: 13px;
+  font-weight: 600;
   /* border: 1px solid black; */
 }
 
@@ -35,12 +38,28 @@
 
 .row {
   width: 100%;
+  /* margin-right: 0px !important; */
+}
+
+.row-1 {
+  justify-content: center;
+  padding: 2.25rem 1.25rem 0rem 2rem;
+  /* margin-right: 0px !important; */
+  /* margin-left: 10px !important; */
 }
 
 .row-2 {
-  display: flex;
   justify-content: space-between;
+  padding: 2.25rem 1.25rem 0rem 2rem;
+  /* margin-left: 10px !important; */
 }
+
+.row-3 {
+  justify-content: space-between;
+  padding: 2.25rem 1.25rem 0rem 2rem;
+  /* margin-left: 10px !important;   */
+}
+
 .main-content {
   display: flex;
   justify-content: flex-start;
@@ -67,9 +86,12 @@
 
 .realtime-users {
   background-color: white;
-  height: 180px;
+  width: 22.35%;
+  height: 200px;
   box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.17);
   border-radius: 4px;
+  padding: 25px;
+  margin-right: 1px;
 }
 
 .total-visits {
@@ -95,14 +117,17 @@
 
 .most-visited {
   background-color: white;
-  height: 100px;
+  width: 67.30%;
+  height: 365px;
   box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.17);
   border-radius: 4px;
+  /* margin-right: 40px; */
 }
 
 .media-traffic {
   background-color: white;
-  height: 100px;
+  width: 29%;
+  height: 365px;
   box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.17);
   border-radius: 4px;
 }

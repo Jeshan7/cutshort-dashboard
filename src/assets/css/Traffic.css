@@ -1,0 +1,44 @@
+.heading-3 {
+  height: 70px;
+  font-family: 'Roboto-Regular', 'Roboto';
+  font-size: 17px;
+  font-weight: 600;
+  padding: 23px 0px 23px 25px;
+  text-align: left;
+}
+
+.network {
+  width: 30%;    
+}
+
+.progress-1 {
+  height: 6px !important;
+  width: 103px;
+  position: absolute;
+  bottom: 223px;
+  right: 45px;
+}
+
+.progress-2 {
+  height: 6px !important;
+  width: 103px;
+  position: absolute;
+  bottom: 163px;
+  right: 45px;
+}
+
+.progress-3 {
+  height: 6px !important;
+  width: 103px;
+  position: absolute;
+  bottom: 104px;
+  right: 45px;
+}
+
+.progress-4 {
+  height: 6px !important;
+  width: 103px;
+  position: absolute;
+  bottom: 43px;
+  right: 45px;
+}

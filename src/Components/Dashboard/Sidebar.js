@@ -6,19 +6,41 @@ function Sidebar() {
     return (
       <div className="Sidebar"> 
         <div className="profile-box"> 
-         <div className="">
+         <div className="pro">
            <img src={image} alt="Profile Image" className="profile-image" />
+           <i className="fas fa-cog fa-lg settings"></i>
+           </div>
            <div className="user-name"> Jeshan Khan </div>
            <div className="user-role"> Developer </div>
-         </div> 
         </div>   
         <div className="sidebar-wrapper">
           <ul>
-            <li> <i className="fab fa-airbnb fa-lg sidebar-icons"></i> Dashboard </li>
-            <li> <i className="fab fa-airbnb fa-lg sidebar-icons"></i> Calendar </li>
-            <li> <i className="fab fa-airbnb fa-lg sidebar-icons"></i> Inbox </li>
-            <li> <i className="fab fa-airbnb fa-lg sidebar-icons"></i> Invoicing </li>
-            <li> <i className="fab fa-airbnb fa-lg sidebar-icons"></i> Lab/Experimental</li>
+            {/* <li className="dropdown-toggle" data-toggle="dropdown">
+              <i className="fab fa-airbnb fa-lg sidebar-icons"></i> 
+              Dashboard 
+              <span className="caret"></span>
+              <ul className="dropdown-menu">
+                <li> Page Visitors </li>
+                <li> Post Performance </li>
+                <li> Team Overall </li>
+              </ul>
+            </li> */}
+            <li className="dropdown">
+              <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <i className="fas fa-chart-line fa-lg sidebar-icons"></i>
+                Dashboard
+                <span className="caret"></span></a>
+                <ul className="dropdown-menu asd" role="listbox">
+                  <li><a href="#" className="dropdown-item" role="option">Page Visitors</a></li>
+                  <li><a href="#" className="dropdown-item" role="option">Post Performance</a></li>
+                  <li><a href="#" className="dropdown-item" role="option">Team Overall</a></li>
+                  <li className="divider"></li>
+                </ul>
+            </li>
+            <li> <i className="far fa-calendar fa-lg sidebar-icons"></i> Calendar </li>
+            <li> <i className="fas fa-inbox fa-lg sidebar-icons"></i> Inbox </li>
+            <li> <i className="far fa-file-alt fa-lg sidebar-icons"></i> Invoicing </li>
+            <li> <i className="fas fa-vials fa-lg sidebar-icons"></i> Lab/Experimental</li>
           </ul>
         </div>
         <div className="sidebar-wrapper-2">

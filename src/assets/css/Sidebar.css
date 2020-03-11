@@ -9,6 +9,7 @@
   border-bottom: 1px solid #e5e5e5;    
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .profile-image {
@@ -78,13 +79,17 @@ li {
   font-size: 13px;
   font-weight: 600;
   color: #585858;
+  position: relative;
+  top: 6px;
 }
 
 .user-role {
   font-family: 'Roboto-Regular', 'Roboto';
   font-size: 13px;
   font-weight: 600;
-  color: #585858;
+  color: #A8A8A8;
+  position: relative;
+  top: 6px;
 }
 
 .f-arrow {
@@ -104,6 +109,10 @@ li {
   font-size: 13px;
   font-weight: 600;
   color: #989898;
+}
+
+.block-2 {
+  
 }
 
 .sidebar-icons {
@@ -131,4 +140,23 @@ li {
   font-weight: 600;
   color: #989898;
   width: 10px;
+}
+
+.settings {
+  z-index: 1;
+  position: absolute;
+  top: 105px;
+  right: 50px;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  padding: 10px 0px 0px 0px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.asd {
+  background-color: black;
+  width: 100px;
+  height: 100px;
 }

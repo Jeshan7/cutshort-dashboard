@@ -1,0 +1,80 @@
+.heading-2 {
+  height: 70px;
+  font-family: 'Roboto-Regular', 'Roboto';
+  font-size: 17px;
+  font-weight: 600;
+  padding: 23px 0px 23px 25px;
+  text-align: left;
+}
+
+.table {
+  margin: 0 !important;
+}
+
+.table th {
+  font-family: 'Roboto-Regular', 'Roboto';
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left; 
+  color: #989898;
+  padding: 15px 0px 15px 25px !important;
+  border-bottom: 1px solid #dee2e6 !important;    
+}
+
+.table td {
+  font-family: 'Roboto-Regular', 'Roboto';
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  color: #484848;
+  padding: 20px 0px 20px 25px !important;
+}
+
+.unique-page-visits {
+  width: 22%;  
+}
+
+.visitors {
+  width: 14%;;
+}
+
+.page-name {
+  width: 31%;
+}
+
+.line-a {
+  width: 100px;
+  height: 44px;
+  position: absolute;
+  bottom: 218px;
+  right: 380px;
+}
+
+.line-b {
+  width: 100px;
+  height: 44px;
+  position: absolute;
+  bottom: 160px;
+  right: 380px;
+}
+
+.line-c {
+  width: 100px;
+  height: 44px;
+  position: absolute;
+  bottom: 85px;
+  right: 380px;
+}
+
+.line-d {
+  width: 100px;
+  height: 44px;
+  position: absolute;
+  bottom: 25px;
+  right: 380px;
+}
+
+.ext-icon {
+  text-align: right;
+  color: grey;
+}
