@@ -1,6 +1,11 @@
 import React from 'react';
 import '../../assets/css/Sidebar.css';
 import image from '../../assets/images/13.jpg';
+import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
+import InboxOutlinedIcon from '@material-ui/icons/InboxOutlined';
+import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 function Sidebar() {
     return (
@@ -15,32 +20,48 @@ function Sidebar() {
         </div>   
         <div className="sidebar-wrapper">
           <ul>
-            {/* <li className="dropdown-toggle" data-toggle="dropdown">
-              <i className="fab fa-airbnb fa-lg sidebar-icons"></i> 
-              Dashboard 
-              <span className="caret"></span>
-              <ul className="dropdown-menu">
-                <li> Page Visitors </li>
-                <li> Post Performance </li>
-                <li> Team Overall </li>
-              </ul>
-            </li> */}
-            <li className="dropdown">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <i className="fas fa-chart-line fa-lg sidebar-icons"></i>
-                Dashboard
-                <span className="caret"></span></a>
-                <ul className="dropdown-menu asd" role="listbox">
-                  <li><a href="#" className="dropdown-item" role="option">Page Visitors</a></li>
-                  <li><a href="#" className="dropdown-item" role="option">Post Performance</a></li>
-                  <li><a href="#" className="dropdown-item" role="option">Team Overall</a></li>
-                  <li className="divider"></li>
-                </ul>
+            <li>
+            {/* <i className="fas fa-chart-line fa-lg sidebar-icons"></i> */}
+            <DashboardOutlinedIcon className="sidebar-icons"/>
+              <a data-toggle="collapse"
+                 href="#collapseData"
+                 aria-expanded="false"
+                 aria-controls="collapseData"
+                 className="dashboard-sidebar">
+                  Dashboard                
+              </a>
+              <ArrowDropDownIcon className="dropdown-arrow"/>
+              {/* <span className="caret dropdown-caret"></span> */}
+                <div className="collapse show collapseData" id="collapseData">
+                  
+                  <div  className="abs">
+                  <span className="collapse-items">Page Visitors</span>
+                  <br />
+                  </div>
+                  <div className="abs">
+                  <span className="collapse-items">Post Performance</span>
+                  <br />
+                  </div>
+                  <div className="abs"><span className="collapse-items">Team  Overall</span></div>
+                </div>
             </li>
-            <li> <i className="far fa-calendar fa-lg sidebar-icons"></i> Calendar </li>
-            <li> <i className="fas fa-inbox fa-lg sidebar-icons"></i> Inbox </li>
-            <li> <i className="far fa-file-alt fa-lg sidebar-icons"></i> Invoicing </li>
-            <li> <i className="fas fa-vials fa-lg sidebar-icons"></i> Lab/Experimental</li>
+            <li> <CalendarTodayOutlinedIcon className="sidebar-icons"/>
+              {/* <i className="far fa-calendar fa-lg sidebar-icons"></i>  */}
+              Calendar </li>
+            <li> 
+              {/* <i className="fas fa-inbox fa-2x sidebar-icons"></i>  */}
+              <InboxOutlinedIcon className="sidebar-icons"/> 
+              Inbox 
+            </li>
+            <li> 
+              {/* <i className="far fa-file-alt fa-lg sidebar-icons"></i> */}
+               <DescriptionOutlinedIcon className="sidebar-icons"/>
+               Invoicing 
+            </li>
+            <li> 
+              <i className="fas fa-vials fa-lg sidebar-icons"></i> 
+              
+              Lab/Experimental</li>
           </ul>
         </div>
         <div className="sidebar-wrapper-2">

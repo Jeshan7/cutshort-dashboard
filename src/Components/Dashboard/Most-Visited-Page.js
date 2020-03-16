@@ -20,12 +20,13 @@ const PageVisited = (props) => {
         <tbody>
             <tr>
               <td> /store/ 
-                <i class="fas fa-external-link-alt ext-icon"></i>
+              <span style={{float:"right"}}><i class="fas fa-external-link-alt ext-icon"></i></span>
               </td>
               <td> 4,890 </td>
               <td> 3,985 </td>
-              <td> 81.56%
-              <div className="line-a">   
+              <td> <div className="container row ">
+              <div>81.56%</div>
+              <div className="line-common">   
                 <Line
                   data={props.data}
                   
@@ -54,17 +55,25 @@ const PageVisited = (props) => {
                     }
                   }}
                 />
+              </div>
+
               </div>
               </td>
             </tr>
             <tr>
               <td> /store/symbols-styleguides
-                <i class="fas fa-external-link-alt ext-icon"></i>
+              <span style={{float:"right"}}><i class="fas fa-external-link-alt ext-icon"></i></span>
               </td>
               <td> 3,785 </td>
               <td> 3,182 </td>
-              <td> 62.56%
-              <div className="line-b">   
+              <td> 
+
+
+
+
+                            <div className="container row">
+                    <div>62.56%</div>     
+              <div className="line-common">   
                 <Line
                   data={props.data}
                   
@@ -94,16 +103,24 @@ const PageVisited = (props) => {
                   }}
                 />
               </div>
+                            </div>
+
+
+
+
+
               </td>
             </tr>
             <tr>
               <td> /store/dashboard-ui-kit 
-                <i class="fas fa-external-link-alt ext-icon"></i>
+              <span style={{float:"right"}}><i class="fas fa-external-link-alt ext-icon"></i></span>
               </td>
               <td> 2,985 </td>
               <td> 2,115 </td>
-              <td> 58.76% 
-              <div className="line-c">   
+              <td> <div className="container row">
+                
+              <div>58.76% </div>
+              <div className="line-common">   
                 <Line
                   data={props.data}
                   
@@ -132,17 +149,22 @@ const PageVisited = (props) => {
                     }
                   }}
                 />
-              </div>  
+              </div>
+                
+                </div>  
               </td>
             </tr>
             <tr>
               <td>/store/webflow-cards.html
-                <i class="fas fa-external-link-alt ext-icon"></i>
+               <span style={{float:"right"}}><i class="fas fa-external-link-alt ext-icon"></i></span>
               </td>
               <td> 2,440 </td>
               <td> 1,789 </td>
-              <td> 39.59%
-              <div className="line-d">   
+              <td> <div className="container row">
+
+
+              <div>39.59%</div>
+              <div className="line-common">   
                 <Line
                   data={props.data}
                   options={{ 
@@ -170,6 +192,9 @@ const PageVisited = (props) => {
                     }
                   }}
                 />
+              </div>
+
+
               </div>
               </td>
             </tr>

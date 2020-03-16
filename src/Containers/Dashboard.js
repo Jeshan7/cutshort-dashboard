@@ -8,24 +8,33 @@ import Visits from '../Components/Dashboard/Total-Visits';
 import Rate from '../Components/Dashboard/Bounce-Rate';
 import PageVisited from '../Components/Dashboard/Most-Visited-Page';
 import Traffic from '../Components/Dashboard/Social-Media-Traffic';
+import BarChart from './BarChart';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import { Select } from '@material-ui/core';
+import SelectPage from '../Components/Dashboard/Select';
+import ReactFlagsSelect from 'react-flags-select';
+import 'react-flags-select/css/react-flags-select.css';
+
+
 class Dashboard extends Component {
   state = {
     barData: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
-      datasets:[
+      datasets: [
         {
           label: "Visiters",
+          title: "12 December 2019",
           data: [
             3500,
             3000,
             4000,
             5000,
             6000
-          ], 
+          ],
           backgroundColor: '#0000FF',
-          barThickness: 15,
+          barThickness: 12,
           borderRadius: 23
         }
       ]
@@ -33,9 +42,9 @@ class Dashboard extends Component {
     lineChart1: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-      ],  
+      ],
       datasets: [
-        { 
+        {
           label: "visits",
           data: [
             3500,
@@ -49,7 +58,7 @@ class Dashboard extends Component {
             1023,
             500,
             3265,
-            3560  
+            3560
           ],
           backgroundColor: 'rgba(0, 0, 255, 0.2)',
           borderWidth: '3',
@@ -62,9 +71,9 @@ class Dashboard extends Component {
     lineChart2: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-      ],  
+      ],
       datasets: [
-        { 
+        {
           label: "visits",
           data: [
             3500,
@@ -78,7 +87,7 @@ class Dashboard extends Component {
             1023,
             500,
             3265,
-            3560 
+            3560
           ],
           backgroundColor: 'rgba(34, 139, 34, 0.2)',
           borderWidth: '3',
@@ -91,9 +100,9 @@ class Dashboard extends Component {
     lineChart3: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-      ],  
+      ],
       datasets: [
-        { 
+        {
           label: "visits",
           data: [
             3500,
@@ -107,7 +116,7 @@ class Dashboard extends Component {
             1023,
             500,
             3265,
-            3560 
+            3560
           ],
           backgroundColor: 'rgba(137, 86, 255, 0.2)',
           borderWidth: '3',
@@ -120,9 +129,9 @@ class Dashboard extends Component {
     lineChart4: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-      ],  
+      ],
       datasets: [
-        { 
+        {
           label: "visits",
           data: [
             3500,
@@ -136,7 +145,7 @@ class Dashboard extends Component {
             1023,
             500,
             3265,
-            3560  
+            3560
           ],
           backgroundColor: 'rgba(255,255,0, 0.2)',
           borderWidth: '3',
@@ -149,28 +158,44 @@ class Dashboard extends Component {
   }
 
   render() {
-      return (
-        <div className="Dashboard">
-          <nav className="navbar navbar-expand-lg navbar-light bg-white cutshort-navbar">
-            <span className="col-md-2 navbar-brand home-icon">
-              <i class="fas fa-home fa-xs"></i> 
-            </span>
-            <div className="col-md-8 dashboard-title">Dashboard</div>
-            <div className="col-md-2 language-selector"></div>
-          </nav>
+    return (
+      <div className="Dashboard">
 
-          <div className="wrapper">
-            <div className="container-fluid pr-0 x">
-              <div className="row">
-                <div className="col-md-2 sidebar">
-                  <Sidebar />
-                </div>
-                <div className="col-md-10 content">
-                  <div className="container main-content">
+        {/* <div>
+
+          <BarChart/>
+
+          </div> */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-white cutshort-navbar">
+          <span className="col-md-2 navbar-brand home-icon">
+            {/* <i class="fas fa-home fa-xs"></i> */}
+            {/* <div className="vertical-line"></div>  */}
+            <HomeOutlinedIcon />
+          </span>
+          <div className="col-md-8 dashboard-title">Dashboard</div>
+          <div className="col-md-2 language-selector">
+            <ReactFlagsSelect 
+              defaultCountry="GB"
+              countries={["US", "GB", "FR", "DE", "IT"]} 
+              customLabels={{"US": "ENG","GB": "ENG","FR": "FR","DE": "DE","IT": "IT"}}
+              selectedSize={14} 
+              optionsSize={14}
+            />
+          </div>
+        </nav>
+
+        <div className="wrapper">
+          <div className="container-fluid pr-0 x">
+            <div className="row">
+              <div className="col-md-2 sidebar">
+                <Sidebar />
+              </div>
+              <div className="col-md-10 content">
+                <div className="container main-content">
                   <div className="row row-1">
                     <div className="col-md-12 daily-visitors">
-                      <DailyVisitors data={this.state.barData}/>
-                    </div> 
+                      <DailyVisitors data={this.state.barData} />
+                    </div>
                   </div>
                   <div className="row row-2">
                     <div className="realtime-users">
@@ -184,23 +209,23 @@ class Dashboard extends Component {
                     </div>
                     <div className="realtime-users">
                       <Duration data={this.state.lineChart4} />
-                    </div> 
+                    </div>
                   </div>
                   <div className="row row-3">
                     <div className="most-visited">
-                      <PageVisited data={this.state.lineChart1}/>
+                      <PageVisited data={this.state.lineChart1} />
                     </div>
                     <div className="media-traffic">
                       <Traffic />
-                    </div> 
-                  </div>
+                    </div>
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </div>
-      );
+      </div>
+    );
   }
 }
 

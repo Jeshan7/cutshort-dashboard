@@ -42,39 +42,23 @@
   width: 31%;
 }
 
-.line-a {
-  width: 100px;
-  height: 44px;
-  position: absolute;
-  bottom: 218px;
-  right: 380px;
-}
 
-.line-b {
-  width: 100px;
-  height: 44px;
-  position: absolute;
-  bottom: 160px;
-  right: 380px;
-}
-
-.line-c {
-  width: 100px;
-  height: 44px;
-  position: absolute;
-  bottom: 85px;
-  right: 380px;
-}
-
-.line-d {
-  width: 100px;
-  height: 44px;
-  position: absolute;
-  bottom: 25px;
-  right: 380px;
+.line-common {
+  width: 120px;
+  height: 54px;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: -25px;
+  /* padding: 1rem; */
+  /* bottom: 25px;
+  right: 380px; */
 }
 
 .ext-icon {
   text-align: right;
   color: grey;
+}
+
+.row-123 {
+  height: 1px;
 }

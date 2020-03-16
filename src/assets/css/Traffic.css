@@ -11,34 +11,14 @@
   width: 30%;    
 }
 
-.progress-1 {
+.progress {
   height: 6px !important;
   width: 103px;
-  position: absolute;
-  bottom: 223px;
-  right: 45px;
+  position: relative;
+  left: 20px;
+  top: 5px;
 }
 
-.progress-2 {
-  height: 6px !important;
-  width: 103px;
-  position: absolute;
-  bottom: 163px;
-  right: 45px;
-}
-
-.progress-3 {
-  height: 6px !important;
-  width: 103px;
-  position: absolute;
-  bottom: 104px;
-  right: 45px;
-}
-
-.progress-4 {
-  height: 6px !important;
-  width: 103px;
-  position: absolute;
-  bottom: 43px;
-  right: 45px;
+.table-row {
+  height: 70px;
 }
