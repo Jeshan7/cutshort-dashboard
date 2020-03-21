@@ -8,10 +8,7 @@ import Visits from '../Components/Dashboard/Total-Visits';
 import Rate from '../Components/Dashboard/Bounce-Rate';
 import PageVisited from '../Components/Dashboard/Most-Visited-Page';
 import Traffic from '../Components/Dashboard/Social-Media-Traffic';
-import BarChart from './BarChart';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import { Select } from '@material-ui/core';
-import SelectPage from '../Components/Dashboard/Select';
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 
@@ -160,9 +157,7 @@ class Dashboard extends Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-white cutshort-navbar">
           <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4 navbar-brand custom-navbar-brand">
           <div className="navbar-line">
-            {/* <span className="home-icon"> */}
               <HomeOutlinedIcon className="home-icon"/>
-            {/* </span> */}
           </div>
           </div>
           

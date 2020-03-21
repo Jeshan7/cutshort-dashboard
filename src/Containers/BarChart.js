@@ -7,7 +7,6 @@ class BarChart extends React.Component {
   constructor(props) {
     super(props);
 
-
     Chart.helpers.extend(Chart.elements.Rectangle.prototype, {
         draw() {
           const { ctx } = this._chart;
@@ -308,10 +307,7 @@ class BarChart extends React.Component {
                 },
                 ticks: {
                   beginAtZero: true,
-                //   steps: 9,
-                  // stepValue: 5,
                   stepSize: 3000,
-                //   min: 0,
                   max: 9000,
                   display: false
                 }
@@ -320,11 +316,7 @@ class BarChart extends React.Component {
             }}
           />
     );
+  }
 }
-
-
-}
-
-
 
 export default BarChart;
