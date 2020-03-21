@@ -3,6 +3,7 @@ import '../../assets/css/Daily-Visitors.css';
 import { Bar } from 'react-chartjs-2';
 import BarChart from '../../Containers/BarChart';
 import SelectPage from './Select';
+import { useState } from 'react';
 
 function DailyVisitors(props) {
   
@@ -10,16 +11,43 @@ function DailyVisitors(props) {
   const year = ["2010", "2011", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"];
   let name_month = "months";
   let name_year = "year";
+  let day_values = ["December"]
+
+  const[my_state, setState] = useState({
+    "month":"January",
+    "year": "2001"
+  })
+
+  const onMonthChange = (e) => {
+    setState({
+      "month": month[e.target.value]
+    });
+  }
+
+  const onYearChange = (e) => {
+    setState({
+      "year": year[e.target.value]
+    });
+  }
+
   return (
       <div className="DailyVisitors">   
         <div className="row header">
-            Daily Visitors
+            Daily Visitors  
             <div className="dailyvisit-select">
           <div className="col-md-2">
-            <SelectPage name={name_month} data={month}/>  
+            <select onChange={onMonthChange} className="browser-default custom-select">
+              {month.map(function(name, index){
+                return <option className="custom-option" key={ index } value={ index }>{name}</option>;
+              })}
+            </select>
           </div>
           <div  className="col-md-2"> 
-            <SelectPage name={name_year} data={year}/>
+            <select onChange={onYearChange} className="browser-default custom-select">
+              {year.map(function(name, index){
+                return <option className="custom-option" key={ index } value={ index }>{name}</option>;
+              })}
+            </select>
           </div>
         </div>
         </div>
@@ -27,6 +55,9 @@ function DailyVisitors(props) {
         <BarChart
           className="abc"
           data={props.data}
+          tooltipsLabel={day_values}
+          month={my_state.month} 
+          year={my_state.year} 
           options={{ 
             responsive: true,
             legend: {

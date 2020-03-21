@@ -21,7 +21,6 @@ function Sidebar() {
         <div className="sidebar-wrapper">
           <ul>
             <li>
-            {/* <i className="fas fa-chart-line fa-lg sidebar-icons"></i> */}
             <DashboardOutlinedIcon className="sidebar-icons"/>
               <a data-toggle="collapse"
                  href="#collapseData"
@@ -31,9 +30,7 @@ function Sidebar() {
                   Dashboard                
               </a>
               <ArrowDropDownIcon className="dropdown-arrow"/>
-              {/* <span className="caret dropdown-caret"></span> */}
                 <div className="collapse show collapseData" id="collapseData">
-                  
                   <div  className="abs">
                   <span className="collapse-items">Page Visitors</span>
                   <br />
@@ -46,20 +43,17 @@ function Sidebar() {
                 </div>
             </li>
             <li> <CalendarTodayOutlinedIcon className="sidebar-icons"/>
-              {/* <i className="far fa-calendar fa-lg sidebar-icons"></i>  */}
               Calendar </li>
             <li> 
-              {/* <i className="fas fa-inbox fa-2x sidebar-icons"></i>  */}
               <InboxOutlinedIcon className="sidebar-icons"/> 
               Inbox 
             </li>
             <li> 
-              {/* <i className="far fa-file-alt fa-lg sidebar-icons"></i> */}
                <DescriptionOutlinedIcon className="sidebar-icons"/>
                Invoicing 
             </li>
             <li> 
-              <i className="fas fa-vials fa-lg sidebar-icons"></i> 
+              <i className="fas fa-vials fa-lg lab-icon"></i> 
               
               Lab/Experimental</li>
           </ul>

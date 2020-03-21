@@ -25,13 +25,10 @@ class Dashboard extends Component {
       datasets: [
         {
           label: "Visiters",
-          title: "12 December 2019",
           data: [
-            3500,
-            3000,
-            4000,
-            5000,
-            6000
+            3500,3500,3500,3500,2300,5500,7523,6356,2452,3265,
+            3000,5555,2305,4127,6352,4578,5234,1035,5236,4569,
+            2354,1498,5645,2653,1243,2568,3207,8456,7452,2345,5000
           ],
           backgroundColor: '#0000FF',
           barThickness: 12,
@@ -160,20 +157,17 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="Dashboard">
-
-        {/* <div>
-
-          <BarChart/>
-
-          </div> */}
         <nav className="navbar navbar-expand-lg navbar-light bg-white cutshort-navbar">
-          <span className="col-md-2 navbar-brand home-icon">
-            {/* <i class="fas fa-home fa-xs"></i> */}
-            {/* <div className="vertical-line"></div>  */}
-            <HomeOutlinedIcon />
-          </span>
-          <div className="col-md-8 dashboard-title">Dashboard</div>
-          <div className="col-md-2 language-selector">
+          <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4 navbar-brand custom-navbar-brand">
+          <div className="navbar-line">
+            {/* <span className="home-icon"> */}
+              <HomeOutlinedIcon className="home-icon"/>
+            {/* </span> */}
+          </div>
+          </div>
+          
+          <div className="col-lg-8 col-md-8 col-sm-4 col-hs-4 dashboard-title">Dashboard</div>
+          <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4 language-selector">
             <ReactFlagsSelect 
               defaultCountry="GB"
               countries={["US", "GB", "FR", "DE", "IT"]} 
@@ -187,13 +181,13 @@ class Dashboard extends Component {
         <div className="wrapper">
           <div className="container-fluid pr-0 x">
             <div className="row">
-              <div className="col-md-2 sidebar">
+              <div className="col-lg-2 col-md-12 col-sm-12 sidebar">
                 <Sidebar />
               </div>
-              <div className="col-md-10 content">
+              <div className="col-lg-10 col-md-12 col-sm-12 content">
                 <div className="container main-content">
                   <div className="row row-1">
-                    <div className="col-md-12 daily-visitors">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-hs-12 daily-visitors">
                       <DailyVisitors data={this.state.barData} />
                     </div>
                   </div>

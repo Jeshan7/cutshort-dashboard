@@ -182,6 +182,9 @@ class BarChart extends React.Component {
 
   render() {
 
+    let month = this.props.month ? this.props.month : "December";
+    let year = this.props.year ? this.props.year : "2020";
+
     Chart.defaults.pointHitDetectionRadius = 1;
 
 		var customTooltips = function(tooltip) {
@@ -248,7 +251,8 @@ class BarChart extends React.Component {
 			tooltipEl.style.fontFamily = tooltip._fontFamily;
 			tooltipEl.style.fontSize = tooltip.fontSize;
 			tooltipEl.style.fontStyle = tooltip._fontStyle;
-			tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
+      tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
+      console.log("asas", tooltip.fontSize);
   };
   
     return (
@@ -265,27 +269,28 @@ class BarChart extends React.Component {
               custom: customTooltips,
 						  position: 'average',
               yAlign: 'left',
-              title: 'Custom Chart Title',
+              titleFontColor: "red",
               callbacks: {
-                  labelColor: function(tooltipItem, chart) {
+                labelColor: function(tooltipItem, chart) {
                       return {
-                          // borderColor: '#000',
-                          backgroundColor: 'rgb(0, 0, 255)'  
+                        backgroundColor: 'rgb(0, 0, 255)'  
                       } 
-                  },
-                  labelTextColor: function(tooltipItem, chart) {
-                    return 'black';
+                },
+                labelTextColor: function(tooltipItem, chart) {
+                  return 'white';
+                },
+                title: function(tooltipItem, data) {
+                  return data.labels[tooltipItem[0].index] + " " + month + ", " + year;
                 }
               },
-              backgroundColor: 'white ',
+              backgroundColor: 'black',
               borderColor: 'grey',
               borderWidth: 0.25,
               xPadding: 6,
               yPadding: 6,
-              titleFontColor: 'red'
-              // showShadow:true
-              // boxShadow: "0 0px 3px 0 rgba(0, 0, 0, 0.17)"
-
+              titleFontSize: 1,
+              titleFontColor: "#e5e5e5",
+              bodyFontFamily: "sans-serif"
             },
             maintainAspectRatio: false,
             scales: {

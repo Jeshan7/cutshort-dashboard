@@ -24,12 +24,11 @@ const PageVisited = (props) => {
               </td>
               <td> 4,890 </td>
               <td> 3,985 </td>
-              <td> <div className="container row ">
+              <td> <div className="container row">
               <div>81.56%</div>
               <div className="line-common">   
                 <Line
                   data={props.data}
-                  
                   options={{ 
                     responsive:true,
                     maintainAspectRatio: false,
@@ -56,7 +55,6 @@ const PageVisited = (props) => {
                   }}
                 />
               </div>
-
               </div>
               </td>
             </tr>
@@ -67,11 +65,7 @@ const PageVisited = (props) => {
               <td> 3,785 </td>
               <td> 3,182 </td>
               <td> 
-
-
-
-
-                            <div className="container row">
+               <div className="container row">
                     <div>62.56%</div>     
               <div className="line-common">   
                 <Line
@@ -161,8 +155,6 @@ const PageVisited = (props) => {
               <td> 2,440 </td>
               <td> 1,789 </td>
               <td> <div className="container row">
-
-
               <div>39.59%</div>
               <div className="line-common">   
                 <Line

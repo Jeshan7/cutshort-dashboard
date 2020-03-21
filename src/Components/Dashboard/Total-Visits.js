@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/css/Line-chart.css';
 import { Line } from 'react-chartjs-2';
+import lossIcon from '../../assets/images/loss.png';
 
 function Visits(props) {
     return (
@@ -13,6 +14,7 @@ function Visits(props) {
         </div>
         <div className="percentage-red">
           -11.9%
+          <img className="loss-icon" src={lossIcon}/>
         </div>
         <div className="line-chart">
         <Line

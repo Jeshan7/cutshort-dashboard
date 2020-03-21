@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/css/Line-chart.css';
 import { Line } from 'react-chartjs-2';
+import profitIcon from '../../assets/images/profit.png';
 
 function Users(props) {
     return (
@@ -13,6 +14,7 @@ function Users(props) {
         </div>
         <div className="percentage-green">
           +9.8%
+          <img className="loss-icon" src={profitIcon}/>
         </div>
         <div className="line-chart">
         <Line
