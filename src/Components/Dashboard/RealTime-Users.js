@@ -4,25 +4,25 @@ import { Line } from 'react-chartjs-2';
 import profitIcon from '../../assets/images/profit.png';
 
 function Users(props) {
-    return (
-      <div className="Users">   
-        <div className="heading">
-          REALTIME USERS
+  return (
+    <div className="Users">
+      <div className="heading">
+        REALTIME USERS
         </div>
-        <div className="value">
-          56
+      <div className="value">
+        56
         </div>
-        <div className="percentage-green">
-          +9.8%
-          <img className="loss-icon" src={profitIcon}/>
-        </div>
-        <div className="line-chart">
+      <div className="percentage-green">
+        +9.8%
+          <img className="loss-icon" src={profitIcon} />
+      </div>
+      <div className="line-chart">
         <Line
           data={props.data}
-          options={{ 
+          options={{
             maintainAspectRatio: false,
             legend: {
-                display: false,
+              display: false,
             },
             scales: {
               xAxes: [{
@@ -31,9 +31,9 @@ function Users(props) {
                   beginAtZero: true,
                   display: false
                 }
-            }],
-            yAxes: [{
-              gridLines: false,
+              }],
+              yAxes: [{
+                gridLines: false,
                 ticks: {
                   beginAtZero: true,
                   gridLines: false,
@@ -43,9 +43,9 @@ function Users(props) {
             }
           }}
         />
-        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Users;

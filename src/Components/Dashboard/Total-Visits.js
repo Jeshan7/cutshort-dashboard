@@ -4,26 +4,26 @@ import { Line } from 'react-chartjs-2';
 import lossIcon from '../../assets/images/loss.png';
 
 function Visits(props) {
-    return (
-      <div className="Visits">   
-        <div className="heading">
-          TOTAL VISITS
+  return (
+    <div className="Visits">
+      <div className="heading">
+        TOTAL VISITS
         </div>
-        <div className="value">
-          54,598
+      <div className="value">
+        54,598
         </div>
-        <div className="percentage-red">
-          -11.9%
-          <img className="loss-icon" src={lossIcon}/>
-        </div>
-        <div className="line-chart">
+      <div className="percentage-red">
+        -11.9%
+          <img className="loss-icon" src={lossIcon} />
+      </div>
+      <div className="line-chart">
         <Line
           data={props.data}
-          options={{ 
+          options={{
             maintainAspectRatio: false,
             bezierCurve: false,
             legend: {
-                display: false,
+              display: false,
             },
             scales: {
               xAxes: [{
@@ -32,9 +32,9 @@ function Visits(props) {
                   beginAtZero: true,
                   display: false
                 }
-            }],
-            yAxes: [{
-              gridLines: false,
+              }],
+              yAxes: [{
+                gridLines: false,
                 ticks: {
                   beginAtZero: true,
                   gridLines: false,
@@ -44,9 +44,9 @@ function Visits(props) {
             }
           }}
         />
-        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Visits;

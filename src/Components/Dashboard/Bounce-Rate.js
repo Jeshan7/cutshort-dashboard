@@ -4,26 +4,26 @@ import { Line } from 'react-chartjs-2';
 import profitIcon from '../../assets/images/profit.png';
 
 function Rate(props) {
-    return (
-      <div className="Rate">   
-        <div className="heading">
-          BOUNCE RATE
+  return (
+    <div className="Rate">
+      <div className="heading">
+        BOUNCE RATE
         </div>
-        <div className="value">
-          73.67%
+      <div className="value">
+        73.67%
         </div>
-        <div className="percentage-green">
-          +12.2%
-          <img className="loss-icon" src={profitIcon}/>
-        </div>
-        <div className="line-chart">
+      <div className="percentage-green">
+        +12.2%
+          <img className="loss-icon" src={profitIcon} />
+      </div>
+      <div className="line-chart">
         <Line
           data={props.data}
-          options={{ 
+          options={{
             maintainAspectRatio: false,
             bezierCurve: false,
             legend: {
-                display: false,
+              display: false,
             },
             scales: {
               xAxes: [{
@@ -32,9 +32,9 @@ function Rate(props) {
                   beginAtZero: true,
                   display: false
                 }
-            }],
-            yAxes: [{
-              gridLines: false,
+              }],
+              yAxes: [{
+                gridLines: false,
                 ticks: {
                   beginAtZero: true,
                   gridLines: false,
@@ -44,9 +44,9 @@ function Rate(props) {
             }
           }}
         />
-        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Rate;
