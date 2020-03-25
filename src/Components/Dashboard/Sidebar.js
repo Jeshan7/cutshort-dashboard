@@ -11,66 +11,73 @@ function Sidebar() {
   return (
     <div className="Sidebar">
       <div className="profile-box">
-        <div className="pro">
+        <div className="profile-image-box">
           <img src={image} alt="Profile Image" className="profile-image" />
           <i className="fas fa-cog fa-lg settings"></i>
         </div>
-        <div className="user-name"> Jeshan Khan </div>
+        <div className="user-name">
+          Jeshan Khan
+          <div className="online"></div>
+        </div>
         <div className="user-role"> Developer </div>
       </div>
-      <div className="sidebar-wrapper">
+      <div className="sidebar-wrapper-1">
         <ul>
           <li>
             <DashboardOutlinedIcon className="sidebar-icons" />
-            <a data-toggle="collapse"
-              href="#collapseData"
-              aria-expanded="false"
-              aria-controls="collapseData"
-              className="dashboard-sidebar">
-              Dashboard
+            <div className="dash">
+              <a data-toggle="collapse"
+                href="#collapseData"
+                aria-expanded="false"
+                aria-controls="collapseData"
+                className="dashboard-sidebar">
+                Dashboard
               </a>
-            <ArrowDropDownIcon className="dropdown-arrow" />
-            <div className="collapse show collapseData" id="collapseData">
-              <div className="abs">
-                <span className="collapse-items">Page Visitors</span>
-                <br />
+              <ArrowDropDownIcon className="dropdown-arrow" />
+              <div className="collapse show collapseData" id="collapseData">
+                <div className="collapse-data">
+                  <span className="collapse-items">Page Visitors</span>
+                  <br />
+                </div>
+                <div className="collapse-data">
+                  <span className="collapse-items">Post Performance</span>
+                  <br />
+                </div>
+                <div className="collapse-data"><span className="collapse-items">Team  Overall</span></div>
               </div>
-              <div className="abs">
-                <span className="collapse-items">Post Performance</span>
-                <br />
-              </div>
-              <div className="abs"><span className="collapse-items">Team  Overall</span></div>
             </div>
           </li>
           <li> <CalendarTodayOutlinedIcon className="sidebar-icons" />
-            Calendar </li>
+            <div className="dash">Calendar</div> </li>
           <li>
             <InboxOutlinedIcon className="sidebar-icons" />
-            Inbox
-            </li>
+            <div className="dash">Inbox<i className="fas fa-caret-up fa-xs inbox-caret-up "></i>
+              <i className="fas fa-caret-down fa-xs inbox-caret-down"></i></div>
+          </li>
           <li>
             <DescriptionOutlinedIcon className="sidebar-icons" />
-            Invoicing
-            </li>
+
+            <div className="dash">Invoicing</div>
+          </li>
           <li>
             <i className="fas fa-vials fa-lg lab-icon"></i>
-
-            Lab/Experimental</li>
+            <div className="dash">Lab/Experimental</div>
+          </li>
         </ul>
       </div>
       <div className="sidebar-wrapper-2">
         <span className="block block-1"> RECENTLY VIEWED </span>
         <span className="block block-2">
           Overall Performance
-            <i className="fas fa-arrow-right f-arrow"></i>
+            <i class="fas fa-long-arrow-alt-right f-arrow-1"></i>
         </span>
         <span className="block block-3">
           Invoice #420
-            <i className="fas fa-arrow-right f-arrow"></i>
+            <i class="fas fa-long-arrow-alt-right f-arrow-2"></i>
         </span>
         <span className="block block-4">
           Customer Minerva Viewer
-            <i className="fas fa-arrow-right f-arrow"></i>
+            <i class="fas fa-long-arrow-alt-right f-arrow-3"></i>
         </span>
       </div>
       <div className="sidebar-wrapper-3">

@@ -1,5 +1,6 @@
 .cutshort-navbar {
   border-bottom: 1px solid #e5e5e5;
+  height: 60px;
 }
 
 .sidebar{
@@ -15,7 +16,6 @@
 
 .home-icon {
   color: #989898;
-  margin-top: 8px;
 }
 
 .custom-navbar-brand {
@@ -26,18 +26,24 @@
 .navbar-line {
   width: 100%;
   border-right: 1px solid #e5e5e5;
-  height: 40px;      
+  height: 60px;  
+  display: flex; 
+  justify-content: center;
+  align-items: center;   
 }
 
 .dashboard-title {
   text-align: left;
   font-family: 'Roboto-Regular', 'Roboto';
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
+  padding-left: 32px !important;
+  color: #505050;
 }
 
 .language-selector {
   height: 40px;
+  padding: 0 13px 0 0;
 }
 
 .row {
@@ -179,10 +185,6 @@ canvas{
 
 
 .flag-select {
-  position: relative;
-  display: inline-block;
-  vertical-align: inherit;
-  text-align: left;
   left: 33px;
   margin-top: 3px !important;
   padding: 0 !important; 
@@ -223,6 +225,10 @@ canvas{
   font-family: 'Roboto-Regular', 'Roboto';
   font-weight: 600;
   top: 1.50px;
+}
+
+.flag-select__option {
+  padding: 0 20px 3px 8px !important;
 }
 
 .flag-select__btn:after, .flag-select__btn[aria-expanded="true"]:after {

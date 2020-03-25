@@ -186,7 +186,7 @@ class BarChart extends React.Component {
 
     Chart.defaults.pointHitDetectionRadius = 1;
 
-    var customTooltips = function (tooltip) {
+    const customTooltips = function (tooltip) {
       // Tooltip Element
       var tooltipEl = document.getElementById('chartjs-tooltip');
 
@@ -219,12 +219,21 @@ class BarChart extends React.Component {
       if (tooltip.body) {
         var titleLines = tooltip.title || [];
         var bodyLines = tooltip.body.map(getBody);
-
+        console.log("aassa", tooltip);
+        
         var innerHtml = '<thead>';
 
         titleLines.forEach(function (title) {
-          innerHtml += '<tr><th>' + title + '</th></tr>';
+          var style = 'font-weight: 600';
+          style += '; line-height: 1.5';
+          style += '; font-size: 11px';
+          style += '; padding: 0 0 5px 3px';
+          style += '; color: #A0A0A0';
+          style += '; text-transform: uppercase';
+          style += "; font-family: 'Roboto-Regular', 'Roboto'";
+          innerHtml += '<tr><th style="' + style + '">' + title + '</th></tr>';
         });
+
         innerHtml += '</thead><tbody>';
 
         bodyLines.forEach(function (body, i) {
@@ -232,11 +241,20 @@ class BarChart extends React.Component {
           var style = 'background:' + colors.backgroundColor;
           style += '; border-color:' + colors.borderColor;
           style += '; border-width: 2px';
+          style += '; width: 6px ; height: 6px';
+          style += '; border-radius: 20px ; margin: 0 6px 1px 1px';
           var span = '<span class="chartjs-tooltip-key" style="' + style + '"></span>';
-          innerHtml += '<tr><td>' + span + body + '</td></tr>';
+          var visitor = body[0];
+          var visitorSplit = visitor.split(":")
+          var customStyle = 'font-size: 12px ; color: #505050';
+          customStyle += "; font-family: 'Roboto-Regular', 'Roboto'";
+          var countStyle = 'font-size: 12px';
+          countStyle += "; font-family: 'Roboto-Regular', 'Roboto'";
+          countStyle += '; position: absolute ; bottom: 11px ; left: 94px ; font-weight: 600 ; color: #505050';
+          innerHtml += '<tr><td style="' + customStyle + '">' + span + visitorSplit[0] +  '<div style = "' + countStyle + '">'+  visitorSplit[1] +'</div>' + '</td></tr>';
         });
         innerHtml += '</tbody>';
-
+        
         var tableRoot = tooltipEl.querySelector('table');
         tableRoot.innerHTML = innerHtml;
       }
@@ -251,7 +269,6 @@ class BarChart extends React.Component {
       tooltipEl.style.fontSize = tooltip.fontSize;
       tooltipEl.style.fontStyle = tooltip._fontStyle;
       tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
-      console.log("asas", tooltip.fontSize);
     };
 
     return (
@@ -264,11 +281,11 @@ class BarChart extends React.Component {
             display: false,
           },
           tooltips: {
+            titleFontSize: '1',
             enabled: false,
             custom: customTooltips,
             position: 'average',
             yAlign: 'left',
-            titleFontColor: "red",
             callbacks: {
               labelColor: function (tooltipItem, chart) {
                 return {
@@ -279,17 +296,20 @@ class BarChart extends React.Component {
                 return 'white';
               },
               title: function (tooltipItem, data) {
-                return data.labels[tooltipItem[0].index] + " " + month + ", " + year;
+                return data.labels[tooltipItem[0].index] + "TH" + " " + month + " " +year;
+              },
+              titleFontSize: function() {
+                // return "white";
+                return {
+                  backgroundColor: 'rgb(0, 0, 255)'
+                }  
               }
             },
             backgroundColor: 'black',
             borderColor: 'grey',
             borderWidth: 0.25,
-            xPadding: 6,
-            yPadding: 6,
-            titleFontSize: 1,
-            titleFontColor: "#e5e5e5",
-            bodyFontFamily: "sans-serif"
+            xPadding: 17,
+            yPadding: 10
           },
           maintainAspectRatio: false,
           scales: {
@@ -297,7 +317,12 @@ class BarChart extends React.Component {
               gridLines: {
                 tickMarkLength: 10,
                 display: false
-              }
+              },
+              ticks: {
+                fontColor: "#989898",
+                fontSize: '13',
+                fontFamily: `'Roboto-Regular', 'Roboto'`,
+              },
             }],
             yAxes: [{
               display: true,
@@ -309,7 +334,24 @@ class BarChart extends React.Component {
                 beginAtZero: true,
                 stepSize: 3000,
                 max: 9000,
-                display: false
+                display: true,
+                labelOffset: 18,
+                fontFamily: `'Roboto-Regular', 'Roboto'`,
+                fontColor: "#989898",
+                fontSize: '11',
+                mirror: true,
+                padding: 10,
+                callback: function(value) {  
+                  if (value === 9000) {
+                    return '9K';
+                  } else if (value === 6000) {
+                    return '6K';
+                  } else if (value === 3000) {
+                    return '3K';
+                  } else {
+                    return '';
+                  }
+                }
               }
             }],
           }

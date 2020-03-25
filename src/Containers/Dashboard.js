@@ -21,11 +21,11 @@ class Dashboard extends Component {
       ],
       datasets: [
         {
-          label: "Visiters",
+          label: "Visitors",
           data: [
-            3500,3500,3500,3500,2300,5500,7523,6356,2452,3265,
-            3000,5555,2305,4127,6352,4578,5234,1035,5236,4569,
-            2354,1498,5645,2653,1243,2568,3207,8456,7452,2345,5000
+            3500, 3500, 3500, 3500, 2300, 5500, 7523, 6356, 2452, 3265,
+            3000, 5555, 2305, 4127, 6352, 4578, 5234, 6035, 5236, 4569,
+            2354, 1498, 5645, 2653, 1243, 2568, 3207, 8456, 7452, 2345, 5000
           ],
           backgroundColor: '#0000FF',
           barThickness: 12,
@@ -54,9 +54,10 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(0, 0, 255, 0.2)',
-          borderWidth: '3',
-          borderColor: 'rgba(0, 0, 255)',
+          backgroundColor: 'rgba(0, 0, 255, 0.1)',
+          borderWidth: '2',
+          // borderColor: 'rgba(0, 0, 255)',
+          borderColor: 'rgb(0, 128, 255)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -83,9 +84,9 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(34, 139, 34, 0.2)',
-          borderWidth: '3',
-          borderColor: 'rgba(34,139,34)',
+          backgroundColor: 'rgba(34, 139, 34, 0.1)',
+          borderWidth: '2',
+          borderColor: 'rgb(41, 163, 41)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -112,8 +113,8 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(137, 86, 255, 0.2)',
-          borderWidth: '3',
+          backgroundColor: 'rgba(137, 86, 255, 0.1)',
+          borderWidth: '2',
           borderColor: 'rgba(137, 86, 255)',
           pointRadius: 0,
           lineTension: 0.1
@@ -141,9 +142,39 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(255,255,0, 0.2)',
-          borderWidth: '3',
+          backgroundColor: 'rgba(255,255,0, 0.1)',
+          borderWidth: '2',
           borderColor: 'rgba(255,255,0)',
+          pointRadius: 0,
+          lineTension: 0
+        }
+      ]
+    },
+    lineChart5: {
+      labels: [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+      ],
+      datasets: [
+        {
+          label: "visits",
+          data: [
+            3500,
+            1253,
+            4020,
+            3023,
+            1601,
+            6223,
+            3122,
+            4012,
+            1023,
+            500,
+            3265,
+            3560
+          ],
+          backgroundColor: 'rgba(0, 0, 255, 0.1)',
+          borderWidth: '2',
+          // borderColor: 'rgba(0, 0, 255)',
+          borderColor: 'rgb(0, 128, 255)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -156,20 +187,21 @@ class Dashboard extends Component {
       <div className="Dashboard">
         <nav className="navbar navbar-expand-lg navbar-light bg-white cutshort-navbar">
           <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4 navbar-brand custom-navbar-brand">
-          <div className="navbar-line">
-              <HomeOutlinedIcon className="home-icon"/>
+            <div className="navbar-line">
+              <HomeOutlinedIcon className="home-icon" />
+            </div>
           </div>
-          </div>
-          
           <div className="col-lg-8 col-md-8 col-sm-4 col-hs-4 dashboard-title">Dashboard</div>
-          <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4 language-selector">
-            <ReactFlagsSelect 
-              defaultCountry="GB"
-              countries={["US", "GB", "FR", "DE", "IT"]} 
-              customLabels={{"US": "ENG","GB": "ENG","FR": "FR","DE": "DE","IT": "IT"}}
-              selectedSize={14} 
-              optionsSize={14}
-            />
+          <div className="col-lg-2 col-md-2 col-sm-4 col-hs-4">
+            <div className="language-selector">
+              <ReactFlagsSelect
+                defaultCountry="GB"
+                countries={["US", "GB", "FR", "DE", "IT"]}
+                customLabels={{ "US": "ENG", "GB": "ENG", "FR": "FR", "DE": "DE", "IT": "IT" }}
+                selectedSize={14}
+                optionsSize={14}
+              />
+            </div>
           </div>
         </nav>
 
@@ -202,7 +234,7 @@ class Dashboard extends Component {
                   </div>
                   <div className="row row-3">
                     <div className="most-visited">
-                      <PageVisited data={this.state.lineChart1} />
+                      <PageVisited data={this.state.lineChart5} />
                     </div>
                     <div className="media-traffic">
                       <Traffic />

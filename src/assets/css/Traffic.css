@@ -1,10 +1,11 @@
 .heading-3 {
   height: 70px;
   font-family: 'Roboto-Regular', 'Roboto';
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 23px 0px 23px 25px;
+  padding: 25px 0px 23px 25px;
   text-align: left;
+  color: #505050;
 }
 
 .network {

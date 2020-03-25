@@ -31,15 +31,15 @@ function DailyVisitors(props) {
       <div className="row header">
         Daily Visitors
             <div className="dailyvisit-select">
-          <div className="col-md-2">
+          <div className="col-md-2 month-dropdown">
             <select onChange={onMonthChange} className="browser-default custom-select">
               {month.map(function (name, index) {
                 return <option className="custom-option" key={index} value={index}>{name}</option>;
               })}
             </select>
           </div>
-          <div className="col-md-2">
-            <select onChange={onYearChange} className="browser-default custom-select">
+          <div className="col-md-2 year-dropdown">
+            <select onChange={onYearChange} className="browser-default custom-select year-select">
               {year.map(function (name, index) {
                 return <option className="custom-option" key={index} value={index}>{name}</option>;
               })}
@@ -49,7 +49,6 @@ function DailyVisitors(props) {
       </div>
       <div className="histogram">
         <BarChart
-          className="abc"
           data={props.data}
           tooltipsLabel={day_values}
           month={my_state.month}
