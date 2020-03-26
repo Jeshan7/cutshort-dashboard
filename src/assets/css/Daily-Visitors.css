@@ -23,7 +23,7 @@
   font-weight: 600;
   height: 250px;
   background-color: white;
-  padding: 37px 25px 25px 25px;    
+  padding: 29px 25px 25px 25px;    
 }
 
 .dailyvisit-select {
@@ -41,6 +41,7 @@
   font-family: 'Roboto-Regular', 'Roboto' !important;
   font-size: 14px !important;
   font-weight: 500 !important;
+  background: none !important;  
 }
 
 select {
@@ -89,4 +90,38 @@ select {
   height: 10px;
   border: 1px solid black;
   margin: 0 !important;
+}
+
+.month-caret-up {
+  position: absolute;
+  bottom: 38px;
+  left: 133px;
+  color: #B8B8B8;
+}
+
+.month-caret-down {
+  position: relative;
+  bottom: 26px;
+  left: 86px;
+  color: #B8B8B8;
+}
+
+.year-caret-up {
+  position: relative;
+  bottom: 33px;
+  left: 67px;
+  color: #B8B8B8;
+}
+
+.year-caret-down {
+  position: relative;
+  bottom: 26px;
+  left: 60.5px;
+  color: #B8B8B8;
+}
+
+.bar-height {
+  display: block;
+    width: 976px;
+    height: 200px;
 }

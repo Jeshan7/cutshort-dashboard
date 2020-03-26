@@ -201,6 +201,8 @@ class Dashboard extends Component {
                 selectedSize={14}
                 optionsSize={14}
               />
+              <i className="fas fa-caret-up fa-xs select-caret-up "></i>
+              <i className="fas fa-caret-down fa-xs select-caret-down"></i>
             </div>
           </div>
         </nav>

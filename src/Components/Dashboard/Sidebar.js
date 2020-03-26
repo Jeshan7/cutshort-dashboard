@@ -51,7 +51,8 @@ function Sidebar() {
             <div className="dash">Calendar</div> </li>
           <li>
             <InboxOutlinedIcon className="sidebar-icons" />
-            <div className="dash">Inbox<i className="fas fa-caret-up fa-xs inbox-caret-up "></i>
+            <div className="dash">Inbox
+              <i className="fas fa-caret-up fa-xs inbox-caret-up "></i>
               <i className="fas fa-caret-down fa-xs inbox-caret-down"></i></div>
           </li>
           <li>
