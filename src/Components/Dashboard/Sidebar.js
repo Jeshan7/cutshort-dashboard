@@ -7,7 +7,7 @@ import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined'
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-function Sidebar() {
+function Sidebar(props) {
   return (
     <div className="Sidebar">
       <div className="profile-box">
@@ -24,16 +24,17 @@ function Sidebar() {
       <div className="sidebar-wrapper-1">
         <ul>
           <li>
-            <DashboardOutlinedIcon className="sidebar-icons" />
+            <DashboardOutlinedIcon className="sidebar-icons" style={ props.color ? { color: "blue"} : null}/>
             <div className="dash">
               <a data-toggle="collapse"
                 href="#collapseData"
                 aria-expanded="false"
                 aria-controls="collapseData"
-                className="dashboard-sidebar">
+                className="dashboard-sidebar"
+                onClick={() => props.handleClickEvent()}>
                 Dashboard
+                <ArrowDropDownIcon className="dropdown-arrow" style={ props.color ? { color: "blue"} : null}/>
               </a>
-              <ArrowDropDownIcon className="dropdown-arrow" />
               <div className="collapse show collapseData" id="collapseData">
                 <div className="collapse-data">
                   <span className="collapse-items">Page Visitors</span>
@@ -70,15 +71,15 @@ function Sidebar() {
         <span className="block block-1"> RECENTLY VIEWED </span>
         <span className="block block-2">
           Overall Performance
-            <i class="fas fa-long-arrow-alt-right f-arrow-1"></i>
+            <i className="fas fa-long-arrow-alt-right f-arrow-1"></i>
         </span>
         <span className="block block-3">
           Invoice #420
-            <i class="fas fa-long-arrow-alt-right f-arrow-2"></i>
+            <i className="fas fa-long-arrow-alt-right f-arrow-2"></i>
         </span>
         <span className="block block-4">
           Customer Minerva Viewer
-            <i class="fas fa-long-arrow-alt-right f-arrow-3"></i>
+            <i className="fas fa-long-arrow-alt-right f-arrow-3"></i>
         </span>
       </div>
       <div className="sidebar-wrapper-3">

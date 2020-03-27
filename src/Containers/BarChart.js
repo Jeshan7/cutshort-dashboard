@@ -2,7 +2,6 @@ import React from 'react';
 import { Bar, Chart } from 'react-chartjs-2';
 import '../assets/css/Dashboard.css';
 
-
 class BarChart extends React.Component {
   constructor(props) {
     super(props);
@@ -180,7 +179,6 @@ class BarChart extends React.Component {
 
 
   render() {
-
     let month = this.props.month ? this.props.month : "December";
     let year = this.props.year ? this.props.year : "2020";
 
@@ -219,8 +217,7 @@ class BarChart extends React.Component {
       if (tooltip.body) {
         var titleLines = tooltip.title || [];
         var bodyLines = tooltip.body.map(getBody);
-        console.log("aassa", tooltip);
-        
+
         var innerHtml = '<thead>';
 
         titleLines.forEach(function (title) {
@@ -251,10 +248,10 @@ class BarChart extends React.Component {
           var countStyle = 'font-size: 12px';
           countStyle += "; font-family: 'Roboto-Regular', 'Roboto'";
           countStyle += '; position: absolute ; bottom: 11px ; left: 94px ; font-weight: 600 ; color: #505050';
-          innerHtml += '<tr><td style="' + customStyle + '">' + span + visitorSplit[0] +  '<div style = "' + countStyle + '">'+  visitorSplit[1] +'</div>' + '</td></tr>';
+          innerHtml += '<tr><td style="' + customStyle + '">' + span + visitorSplit[0] + '<div style = "' + countStyle + '">' + visitorSplit[1] + '</div>' + '</td></tr>';
         });
         innerHtml += '</tbody>';
-        
+
         var tableRoot = tooltipEl.querySelector('table');
         tableRoot.innerHTML = innerHtml;
       }
@@ -296,13 +293,13 @@ class BarChart extends React.Component {
                 return 'white';
               },
               title: function (tooltipItem, data) {
-                return data.labels[tooltipItem[0].index] + "TH" + " " + month + " " +year;
+                return data.labels[tooltipItem[0].index] + "TH" + " " + month + " " + year;
               },
-              titleFontSize: function() {
+              titleFontSize: function () {
                 // return "white";
                 return {
                   backgroundColor: 'rgb(0, 0, 255)'
-                }  
+                }
               }
             },
             backgroundColor: 'black',
@@ -341,7 +338,7 @@ class BarChart extends React.Component {
                 fontSize: '11',
                 mirror: true,
                 padding: 10,
-                callback: function(value) {  
+                callback: function (value) {
                   if (value === 9000) {
                     return '9K';
                   } else if (value === 6000) {

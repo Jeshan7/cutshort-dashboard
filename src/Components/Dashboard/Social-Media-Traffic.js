@@ -4,7 +4,7 @@ import '../../assets/css/Traffic.css';
 const Traffic = () => {
   return (
     <div>
-      <div class="heading-3">
+      <div className="heading-3">
         Social Media Traffic
       </div>
       <table className="table">
@@ -21,7 +21,7 @@ const Traffic = () => {
               <div className="container row row-abc">
                 <div>3,550</div>
                 <div className="progress">
-                  <div class="progress-bar"
+                  <div className="progress-bar"
                     role=" progressbar"
                     style={{ width: "75%", borderRadius: "5px" }}
                     aria-valuenow="25"
@@ -37,7 +37,7 @@ const Traffic = () => {
             <td> <div className="container row row-abc">
               <div>3,550</div>
               <div className="progress">
-                <div class="progress-bar"
+                <div className="progress-bar"
                   role=" progressbar"
                   style={{ width: "75%", borderRadius: "5px" }}
                   aria-valuenow="25"
@@ -53,7 +53,7 @@ const Traffic = () => {
             <td> <div className="container row row-abc">
               <div>3,550</div>
               <div className="progress">
-                <div class="progress-bar"
+                <div className="progress-bar"
                   role=" progressbar"
                   style={{ width: "50%", borderRadius: "5px" }}
                   aria-valuenow="25"
@@ -69,7 +69,7 @@ const Traffic = () => {
             <td> <div className="container row row-abc">
               <div>3,550</div>
               <div className="progress">
-                <div class="progress-bar"
+                <div className="progress-bar"
                   role=" progressbar"
                   style={{ width: "25%", borderRadius: "5px" }}
                   aria-valuenow="25"

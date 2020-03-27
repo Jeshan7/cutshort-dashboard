@@ -3,7 +3,7 @@ import '../../assets/css/Line-chart.css';
 import { Line } from 'react-chartjs-2';
 import profitIcon from '../../assets/images/profit.png';
 
-function Duration(props) {
+const Duration = (props) => {
   return (
     <div className="Duration">
       <div className="heading">

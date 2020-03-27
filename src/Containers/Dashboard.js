@@ -15,6 +15,7 @@ import 'react-flags-select/css/react-flags-select.css';
 
 class Dashboard extends Component {
   state = {
+    setColor: true,
     barData: {
       labels: [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
@@ -27,9 +28,10 @@ class Dashboard extends Component {
             3000, 5555, 2305, 4127, 6352, 4578, 5234, 6035, 5236, 4569,
             2354, 1498, 5645, 2653, 1243, 2568, 3207, 8456, 7452, 2345, 5000
           ],
-          backgroundColor: '#0000FF',
+          backgroundColor: '#0E65D9',
           barThickness: 12,
-          borderRadius: 23
+          borderRadius: 23,
+          hoverBackgroundColor: '#0000CC'
         }
       ]
     },
@@ -54,10 +56,9 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(0, 0, 255, 0.1)',
+          backgroundColor: 'rgba(79, 131, 226, 0.1)',
           borderWidth: '2',
-          // borderColor: 'rgba(0, 0, 255)',
-          borderColor: 'rgb(0, 128, 255)',
+          borderColor: 'rgb(79, 131, 226)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -84,9 +85,9 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(34, 139, 34, 0.1)',
+          backgroundColor: 'rgba(89, 182, 89, 0.1)',
           borderWidth: '2',
-          borderColor: 'rgb(41, 163, 41)',
+          borderColor: 'rgb(89, 182, 89)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -113,9 +114,9 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(137, 86, 255, 0.1)',
+          backgroundColor: 'rgba(121, 109, 245, 0.1)',
           borderWidth: '2',
-          borderColor: 'rgba(137, 86, 255)',
+          borderColor: 'rgb(121, 109, 245)',
           pointRadius: 0,
           lineTension: 0.1
         }
@@ -142,9 +143,9 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(255,255,0, 0.1)',
+          backgroundColor: 'rgba(250, 210, 94, 0.1)',
           borderWidth: '2',
-          borderColor: 'rgba(255,255,0)',
+          borderColor: 'rgb(250, 210, 94)',
           pointRadius: 0,
           lineTension: 0
         }
@@ -171,15 +172,20 @@ class Dashboard extends Component {
             3265,
             3560
           ],
-          backgroundColor: 'rgba(0, 0, 255, 0.1)',
+          backgroundColor: 'rgba(79, 131, 226, 0.1)',
           borderWidth: '2',
-          // borderColor: 'rgba(0, 0, 255)',
-          borderColor: 'rgb(0, 128, 255)',
+          borderColor: 'rgb(79, 131, 226)',
           pointRadius: 0,
           lineTension: 0
         }
       ]
     }
+  }
+  
+  handleSetColor = () => {
+    this.setState({
+      setColor: !this.state.setColor
+    })
   }
 
   render() {
@@ -211,7 +217,7 @@ class Dashboard extends Component {
           <div className="container-fluid pr-0 x">
             <div className="row">
               <div className="col-lg-2 col-md-12 col-sm-12 sidebar">
-                <Sidebar />
+                <Sidebar handleClickEvent={this.handleSetColor} color={this.state.setColor}/>
               </div>
               <div className="col-lg-10 col-md-12 col-sm-12 content">
                 <div className="container main-content">

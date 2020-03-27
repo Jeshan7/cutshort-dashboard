@@ -3,7 +3,7 @@ import '../../assets/css/Line-chart.css';
 import { Line } from 'react-chartjs-2';
 import lossIcon from '../../assets/images/loss.png';
 
-function Visits(props) {
+const Visits = (props) => {
   return (
     <div className="Visits">
       <div className="heading">

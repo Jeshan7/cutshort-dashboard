@@ -11,7 +11,7 @@ function DailyVisitors(props) {
 
   const [my_state, setState] = useState({
     "month": "January",
-    "year": "2001"
+    "year": "2010"
   })
 
   const onMonthChange = (e) => {
@@ -46,14 +46,14 @@ function DailyVisitors(props) {
                 return <option className="custom-option" key={index} value={index}>{name}</option>;
               })}
             </select>
-              <i className="fas fa-caret-up fa-xs year-caret-up "></i>
-              <i className="fas fa-caret-down fa-xs year-caret-down"></i>
+            <i className="fas fa-caret-up fa-xs year-caret-up "></i>
+            <i className="fas fa-caret-down fa-xs year-caret-down"></i>
           </div>
         </div>
       </div>
       <div className="histogram">
         <BarChart
-          className = "bar-height"
+          className="bar-height"
           data={props.data}
           tooltipsLabel={day_values}
           month={my_state.month}

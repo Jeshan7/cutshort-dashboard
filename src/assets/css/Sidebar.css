@@ -61,7 +61,7 @@ ul {
 
 li {
   margin: 0px !important;
-  padding: 15px 0px 0px 0px;
+  padding: 14px 0px 0px 0px;
   border-bottom: 1px solid #e5e5e5;
   width: 100%;
   font-family: 'Roboto-Regular', 'Roboto';
@@ -69,6 +69,7 @@ li {
   font-weight: 600;
   vertical-align: middle;
   color: #585858;
+  cursor: pointer;
 }
 
 .user-name {
@@ -166,6 +167,7 @@ li {
   padding: 10px 0px 0px 0px;
   border-radius: 30px;
   text-align: center;
+  color: #989898;
 }
 
 .asd {
@@ -246,7 +248,7 @@ li {
 
 .dash {
   position: relative;
-  bottom: 21px;
+  bottom: 20px;
   left: 36px;
 }
 
