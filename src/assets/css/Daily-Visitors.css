@@ -71,7 +71,6 @@ select {
   z-index: 999999999;
   width: 10px;
   height: 10px;
-  /* border: 1px solid black; */
   position: relative;
   top: 1px;
   margin: 0 !important;
@@ -81,7 +80,6 @@ select {
   z-index: 999999999;
   width: 10px;
   height: 10px;
-  /* border: 1px solid black; */
   margin: 0 !important;
 }
 
@@ -123,6 +121,6 @@ select {
 
 .bar-height {
   display: block;
-    width: 976px;
-    height: 200px;
+  width: 976px;
+  height: 200px;
 }
